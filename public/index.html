@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>storeAPI</title>
+  </head>
+  <body>
+    <h1>This is a simple store API built with Express js</h1>
+    <p>
+      The primary functionality is fetching and filtering data with the query
+      string
+    </p>
+    <h2>Routes</h2>
+    <h3>api/products</h3>
+    <p>
+      Basicly you can only make a GET req to this API but you can use filter
+      options
+    </p>
+    <ul>
+      <li>featured (accepts true or false)</li>
+      <li>company (accepts company name)</li>
+      <li>name (accepts name)</li>
+      <li>
+        sort (takes in parameter to sort by ...price, name. If '-' included
+        before parameter it will invert the order. You can also add multiple
+        sort by appending with ',')
+      </li>
+      <li>fields</li>
+      <li>numericFilters</li>
+      <li>
+        page (takes in a number representing a page (1 page = 10 products, limit
+        of itmes can be set with ?limit)))
+      </li>
+    </ul>
+  </body>
+</html>
