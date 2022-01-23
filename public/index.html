@@ -12,6 +12,23 @@
       The primary functionality is fetching and filtering data with the query
       string
     </p>
+    <h2>Product model</h2>
+    <p>
+      name: { type: String, required: [true, "product name must be provided"],
+      },
+      <br />
+      price: { type: Number, required: [true, "product price must be provided"],
+      },
+      <br />
+      featured: { type: Boolean, default: false, },
+      <br />
+      rating: { type: Number, default: 4.5, },
+      <br />
+      createdAt: { type: Date, default: Date.now(), },
+      <br />
+      company: { type: String, enum: { values: ["ikea", "liddy", "caressa",
+      "marcos"], message: "{VALUE} is not supported", }, },
+    </p>
     <h2>Routes</h2>
     <h3>api/products</h3>
     <p>
@@ -27,7 +44,9 @@
         before parameter it will invert the order. You can also add multiple
         sort by appending with ',')
       </li>
-      <li>fields</li>
+      <li>
+        fields (accepts property that you want to retrive based on the model)
+      </li>
       <li>numericFilters</li>
       <li>
         page (takes in a number representing a page (1 page = 10 products, limit
